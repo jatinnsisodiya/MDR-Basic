@@ -1,0 +1,267 @@
+<!-- AI Visualization Components for MDR/XDR System -->
+
+<!-- AI Risk Assessment Dashboard -->
+<div class="ai-dashboard" id="aiDashboard">
+    <div class="ai-header">
+        <h2><i class="fas fa-brain"></i> AI-Powered Risk Assessment</h2>
+        <div class="ai-status">
+            <span class="status-indicator active"></span>
+            <span>AI Model Active</span>
+        </div>
+    </div>
+
+    <!-- AI Thinking Process Visualization -->
+    <div class="ai-thinking-process" id="aiVisualization">
+        <div class="ai-stage" id="featureAnalysis">
+            <div class="stage-header">
+                <i class="fas fa-search-plus"></i>
+                <span>Feature Analysis</span>
+                <div class="progress-spinner" style="display: none;"></div>
+            </div>
+            <div class="feature-analysis-grid" id="featureAnalysisGrid">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="ai-stage" id="neuralProcessing">
+            <div class="stage-header">
+                <i class="fas fa-network-wired"></i>
+                <span>Neural Network Processing</span>
+                <div class="progress-spinner" style="display: none;"></div>
+            </div>
+            <div class="neural-network-viz" id="neuralNetworkViz">
+                <!-- Neural network visualization -->
+                <div class="network-layer input-layer">
+                    <div class="layer-label">Input Layer (12 features)</div>
+                    <div class="neurons" id="inputNeurons"></div>
+                </div>
+                <div class="network-layer hidden-layer">
+                    <div class="layer-label">Hidden Layer 1 (24 neurons)</div>
+                    <div class="neurons" id="hiddenNeurons1"></div>
+                </div>
+                <div class="network-layer hidden-layer">
+                    <div class="layer-label">Hidden Layer 2 (16 neurons)</div>
+                    <div class="neurons" id="hiddenNeurons2"></div>
+                </div>
+                <div class="network-layer hidden-layer">
+                    <div class="layer-label">Hidden Layer 3 (8 neurons)</div>
+                    <div class="neurons" id="hiddenNeurons3"></div>
+                </div>
+                <div class="network-layer output-layer">
+                    <div class="layer-label">Output Layer</div>
+                    <div class="neurons" id="outputNeurons"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ai-stage" id="patternRecognition">
+            <div class="stage-header">
+                <i class="fas fa-puzzle-piece"></i>
+                <span>Pattern Recognition</span>
+                <div class="progress-spinner" style="display: none;"></div>
+            </div>
+            <div class="pattern-detection" id="patternDetection">
+                <!-- Pattern visualization -->
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Results Section -->
+    <div class="ai-results" id="aiResults">
+        <div class="result-section confidence-section">
+            <h3><i class="fas fa-chart-line"></i> AI Confidence Score</h3>
+            <div class="confidence-display">
+                <div class="confidence-circle" id="confidenceCircle">
+                    <span class="confidence-value" id="confidenceValue">0%</span>
+                    <span class="confidence-label">Confidence</span>
+                </div>
+                <div class="confidence-breakdown">
+                    <div class="confidence-factor">
+                        <span>Data Quality:</span>
+                        <div class="confidence-bar">
+                            <div class="confidence-fill" id="dataQualityBar"></div>
+                        </div>
+                        <span id="dataQualityScore">0%</span>
+                    </div>
+                    <div class="confidence-factor">
+                        <span>Model Certainty:</span>
+                        <div class="confidence-bar">
+                            <div class="confidence-fill" id="modelCertaintyBar"></div>
+                        </div>
+                        <span id="modelCertaintyScore">0%</span>
+                    </div>
+                    <div class="confidence-factor">
+                        <span>Historical Accuracy:</span>
+                        <div class="confidence-bar">
+                            <div class="confidence-fill" id="historicalAccuracyBar"></div>
+                        </div>
+                        <span id="historicalAccuracyScore">0%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="result-section feature-importance">
+            <h3><i class="fas fa-weight-hanging"></i> Feature Importance</h3>
+            <div class="feature-importance-chart" id="featureImportanceChart">
+                <!-- Feature importance visualization -->
+            </div>
+        </div>
+
+        <div class="result-section ai-explanation">
+            <h3><i class="fas fa-lightbulb"></i> AI Explanation</h3>
+            <div class="explanation-list" id="aiExplanationList">
+                <!-- AI explanations populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="result-section xdr-prediction">
+            <h3><i class="fas fa-skull-crossbones"></i> XDR Progression Prediction</h3>
+            <div class="xdr-prediction-display" id="xdrPredictionDisplay">
+                <div class="prediction-gauge">
+                    <div class="gauge-container">
+                        <canvas id="xdrProgressionGauge" width="200" height="100"></canvas>
+                    </div>
+                    <div class="prediction-details">
+                        <div class="prediction-risk" id="xdrRisk">Low Risk</div>
+                        <div class="prediction-timeframe" id="xdrTimeframe">6+ months</div>
+                        <div class="prediction-confidence" id="xdrConfidence">85% confidence</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="result-section ai-recommendations">
+            <h3><i class="fas fa-robot"></i> AI Recommendations</h3>
+            <div class="recommendations-list" id="aiRecommendationsList">
+                <!-- AI recommendations populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="result-section anomaly-detection">
+            <h3><i class="fas fa-exclamation-triangle"></i> Anomaly Detection</h3>
+            <div class="anomalies-list" id="anomaliesList">
+                <!-- Detected anomalies -->
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Model Performance Dashboard -->
+    <div class="ai-performance" id="aiPerformance">
+        <h3><i class="fas fa-tachometer-alt"></i> Model Performance</h3>
+        <div class="performance-metrics">
+            <div class="metric-card ai-metric">
+                <div class="metric-label">Accuracy</div>
+                <div class="metric-value">94.2%</div>
+                <div class="metric-trend positive">+2.1%</div>
+            </div>
+            <div class="metric-card ai-metric">
+                <div class="metric-label">Precision</div>
+                <div class="metric-value">92.1%</div>
+                <div class="metric-trend positive">+1.8%</div>
+            </div>
+            <div class="metric-card ai-metric">
+                <div class="metric-label">Recall</div>
+                <div class="metric-value">89.3%</div>
+                <div class="metric-trend positive">+3.2%</div>
+            </div>
+            <div class="metric-card ai-metric">
+                <div class="metric-label">F1-Score</div>
+                <div class="metric-value">90.7%</div>
+                <div class="metric-trend positive">+2.5%</div>
+            </div>
+        </div>
+
+        <div class="training-info">
+            <div class="training-data">
+                <i class="fas fa-database"></i>
+                <span>Training Data: 15,847 samples</span>
+            </div>
+            <div class="last-updated">
+                <i class="fas fa-clock"></i>
+                <span>Last Updated: Sep 15, 2024</span>
+            </div>
+            <div class="predictions-made">
+                <i class="fas fa-chart-bar"></i>
+                <span>Predictions Made: <span id="predictionsCount">0</span></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- AI Insights Panel -->
+<div class="ai-insights-panel" id="aiInsightsPanel">
+    <div class="insights-header">
+        <h3><i class="fas fa-eye"></i> AI Insights</h3>
+        <button class="insights-toggle" onclick="toggleInsights()">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+    <div class="insights-content" id="insightsContent">
+        <div class="insight-stream" id="insightStream">
+            <!-- Real-time AI insights -->
+        </div>
+    </div>
+</div>
+
+<!-- AI-Enhanced Risk Assessment Form -->
+<div class="ai-enhanced-form" id="aiEnhancedForm">
+    <div class="form-header">
+        <h3><i class="fas fa-brain"></i> AI-Enhanced Risk Assessment</h3>
+        <div class="ai-assistance">
+            <span class="ai-helper" id="aiHelper">
+                <i class="fas fa-robot"></i>
+                AI Assistant Ready
+            </span>
+        </div>
+    </div>
+
+    <div class="smart-form-fields">
+        <!-- Enhanced form fields with AI suggestions -->
+        <div class="form-group ai-enhanced">
+            <label for="patientAge">Patient Age</label>
+            <input type="number" id="patientAge" class="ai-input">
+            <div class="ai-suggestion" id="ageSuggestion" style="display: none;">
+                <i class="fas fa-lightbulb"></i>
+                <span>AI Insight: Age-related risk factors detected</span>
+            </div>
+        </div>
+
+        <div class="form-group ai-enhanced">
+            <label for="immunityStatus">Immunity Status</label>
+            <select id="immunityStatus" class="ai-input">
+                <option value="normal">Normal</option>
+                <option value="mild">Mildly Compromised</option>
+                <option value="moderate">Moderately Compromised</option>
+                <option value="severe">Severely Compromised</option>
+            </select>
+            <div class="ai-suggestion" id="immunitySuggestion" style="display: none;">
+                <i class="fas fa-shield-alt"></i>
+                <span>AI Recommendation: Consider additional immunological tests</span>
+            </div>
+        </div>
+
+        <!-- Additional AI-enhanced fields -->
+        <div class="ai-predictions-live">
+            <h4><i class="fas fa-chart-line"></i> Live AI Predictions</h4>
+            <div class="live-prediction" id="livePrediction">
+                <div class="prediction-score">
+                    <span class="score-label">Current Risk Score:</span>
+                    <span class="score-value" id="liveScore">0</span>
+                    <span class="score-confidence" id="liveConfidence">(0% confidence)</span>
+                </div>
+                <div class="prediction-trend" id="predictionTrend">
+                    <!-- Trend visualization -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="ai-analyze-btn" onclick="runAIAnalysis()">
+        <i class="fas fa-brain"></i>
+        Run AI Analysis
+        <div class="btn-loader" id="aiAnalysisLoader" style="display: none;">
+            <div class="spinner"></div>
+        </div>
+    </button>
+</div>
