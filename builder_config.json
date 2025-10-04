@@ -1,0 +1,23 @@
+{
+  "builder_settings": {
+    "apiKey": "YOUR_BUILDER_IO_API_KEY",
+    "model": "page",
+    "userAttributes": {
+      "role": [
+        "admin",
+        "editor",
+        "viewer"
+      ]
+    },
+    "targeting": {
+      "urlPath": "/mdr-dashboard"
+    }
+  },
+  "component_registration": [
+    "RiskAssessmentCard",
+    "CBNAATDashboard",
+    "AlertManagement",
+    "HeatMapVisualization",
+    "PatientMetrics"
+  ]
+}

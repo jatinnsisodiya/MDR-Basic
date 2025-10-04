@@ -1,0 +1,36 @@
+{
+  "name": "mdr-xdr-system",
+  "version": "1.0.0",
+  "description": "Multi-Drug and Extensively Drug-Resistant Pathogen Detection System",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "deploy": "builder publish",
+    "figma-sync": "builder sync figma",
+    "components": "builder generate components"
+  },
+  "dependencies": {
+    "@builder.io/react": "^3.0.0",
+    "@builder.io/sdk-react": "^1.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "next": "^13.0.0",
+    "chart.js": "^4.0.0",
+    "react-chartjs-2": "^5.0.0"
+  },
+  "devDependencies": {
+    "@builder.io/cli": "^1.0.0",
+    "@types/react": "^18.0.0"
+  },
+  "keywords": [
+    "healthcare",
+    "mdr",
+    "xdr",
+    "tuberculosis",
+    "infection-control"
+  ],
+  "author": "Healthcare IT Team",
+  "license": "MIT"
+}
